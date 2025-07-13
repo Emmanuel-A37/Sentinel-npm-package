@@ -25,7 +25,7 @@ const flushQueue = async () => {
 
 setInterval(flushQueue, 5000); // retry every 5s
 
-const sentinelLogger = ({ apiKey, url }) => {
+const sentinelLogger = ({ apiKey, url ='https://sentinel-backend-9cgt.onrender.com/api/v1/track' }) => {
   if (!apiKey ) {
     throw new Error('Sentinel Logger: apiKey are required');
   }
